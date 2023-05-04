@@ -236,7 +236,7 @@ export const JobDetailChartsPage = () => {
 
       <CollapsibleSection
         ref={actorTableRef}
-        title="Actors"
+        title="Actor Table"
         expanded={actorTableExpanded}
         onExpandButtonClick={() => {
           setActorTableExpanded(!actorTableExpanded);
@@ -253,7 +253,10 @@ export const JobDetailChartsPage = () => {
         </Section>
       </CollapsibleSection>
 
-      <CollapsibleSection title="Placement Groups" className={classes.section}>
+      <CollapsibleSection
+        title="Placement Group Table"
+        className={classes.section}
+      >
         <Section>
           <PlacementGroupList jobId={jobId} />
         </Section>
