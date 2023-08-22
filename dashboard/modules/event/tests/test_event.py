@@ -79,7 +79,7 @@ def _test_logger(name, log_file, max_bytes, backup_count):
 
 
 def test_python_global_event_logger(tmp_path):
-    logger = get_event_logger(event_pb2.Event.SourceType.GCS, str(tmp_path))
+    logger = get_event_logger(EventSource.GCS, str(tmp_path))
     logger.set_global_context({"test_meta": "1"})
     logger.info("message", a="a", b="b")
     logger.error("message", a="a", b="b")
